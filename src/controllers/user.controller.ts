@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import userService from '../services/user-service';
-import logger from '../utils/logger';
-import { UserDto, CreateUserDto, UpdateUserDto, PaginatedUsersDto } from '../dtos/user-dto';
+import userService from '../services/user.service';
+import logger from '../utils/logger.utils';
+import { UserDto, CreateUserDto, UpdateUserDto, PaginatedUsersDto } from '../dtos/user.dto';
 
 class UserController {
   constructor() {
@@ -81,6 +81,13 @@ class UserController {
 }
 
 export default new UserController();
+
+/**
+   * @swagger
+   * tags:
+   *   name: Users
+   *   description: User management
+   */
 
 /** CREATE USER
    * @swagger

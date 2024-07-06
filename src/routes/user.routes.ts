@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import userController from '../controllers/user-controller';
+import userController from '../controllers/user.controller';
 import { validateCreateUser, validateUpdateUser, validateUUID } from '../validations/user-validation';
 
 const router = Router();
@@ -12,7 +12,6 @@ router.put('/:id', validateUUID, validateUpdateUser, updateUser);
 router.delete('/:id', validateUUID, deleteUser);
 
 export default router;
-
 
 /**
  * @swagger

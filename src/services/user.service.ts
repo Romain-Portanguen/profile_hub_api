@@ -1,5 +1,5 @@
-import User, { UserCreationAttributes, UserAttributes } from '../models/user';
-import { UserDto, CreateUserDto, UpdateUserDto, PaginatedUsersDto } from '../dtos/user-dto';
+import User, { UserCreationAttributes, UserAttributes } from '../models/user.model';
+import { UserDto, CreateUserDto, UpdateUserDto, PaginatedUsersDto } from '../dtos/user.dto';
 
 class UserService {
   async createUser(userData: CreateUserDto): Promise<UserDto> {

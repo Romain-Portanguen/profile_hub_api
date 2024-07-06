@@ -1,7 +1,7 @@
 import sequelize from '../config/database';
-import User from '../models/user';
+import User from '../models/user.model';
 import cliProgress from 'cli-progress';
-import { generateUsers } from '../utils/generate-user';
+import { generateUsers } from '../utils/generate-user.utils';
 
 const resetDatabase = async () => {
   try {

@@ -1,18 +1,25 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import userRoutes from './routes/user-routes';
+import routes from './routes/index.routes';
+import { errorHandler } from './middlewares/error-handler.middlewares';
 import { setupSwagger } from './config/swagger';
-import { errorHandler } from './middlewares/error-handler';
 
 const app = express();
 
+const corsOptions = {
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+};
+
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
+
+app.use('/api', routes);
 
 setupSwagger(app);
-
-app.use('/api/users', userRoutes);
 
 app.use(errorHandler);
 

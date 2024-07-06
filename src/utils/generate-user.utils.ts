@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { generateEmail } from './generate-email';
-import { UserCreationAttributes } from '../models/user';
+import { generateEmail } from './generate-email.utils';
+import { UserCreationAttributes } from '../models/user.model';
 import bcrypt from 'bcryptjs';
 import cliProgress from 'cli-progress';
 

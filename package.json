@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "reset:db": "ts-node src/script/reset-database.ts",
-    "seed:db:num": "ts-node src/script/seed-database.ts",
-    "seed:db": "ts-node src/script/seed-database.ts",
+    "reset:db": "ts-node src/script/reset-database.script.ts",
+    "seed:db:num": "ts-node src/script/seed-database.script.ts",
+    "seed:db": "ts-node src/script/seed-database.script.ts",
     "start": "npm run build && node dist/server.js",
     "test": "jest"
   },

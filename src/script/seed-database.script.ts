@@ -1,7 +1,7 @@
 import sequelize from '../config/database';
-import User from '../models/user';
-import { generateUsers } from '../utils/generate-user';
-import logger from '../utils/logger';
+import User from '../models/user.model';
+import { generateUsers } from '../utils/generate-user.utils';
+import logger from '../utils/logger.utils';
 import cliProgress from 'cli-progress';
 
 
